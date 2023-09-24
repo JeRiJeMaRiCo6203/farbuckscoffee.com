@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    overflow-x: hidden;
+    background-color: #E6DCD4;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    background-color:#026042;
+    z-index: 100;
+}
+nav .nama img{
+    height:90px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+nav ul li:nth-child(1) a{
+    text-shadow: 0 0 10px wheat;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+nav ul li a:hover{
+    text-shadow: 0 0 5px white;
+}
+
+
+nav .burgerButton span{
+    display: none;
+    height: 3px ;
+    border-radius: 3px;
+    background-color: white;
+
+}
+nav .burgerButton{
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+nav .burgerButton:hover{
+    background-color: rgba(221, 221, 221,0.5);
+}
+
+.transformBurger {
+    transform: rotate(90deg) scale(0.7);
+ 
+}
+.bestSale .kotak .warnaActive {
+    background-color: #aaa;
+    transform: scale(1.5);
+}
+
+.slide{
+    transform:translateX(0) ;
+}
+
+
+.gambarUtama{
+    width:100%;
+    height:500px;
+    background-image: url(banner.png
+    );
+    background-position: center;
+    background-size: cover;
+    margin: 90px auto 50px;
+}
+
+.container {
+    width: 96%;
+    margin: 0 auto 70px;
+}
+.container .judul{
+    font-size: 3em;
+    width: 80%;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+
+
+}
+.container ul {
+    list-style: none;
+}
+
+.container ul li{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.container p.team{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+/* footer */
+.footer{
+    width: 100%;
+    background-color: #026042;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+}
+.footer .info, .footer .contact{
+    flex: 1;
+    color: white;
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+}
+
+.info ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+    text-align: center;
+}
+.info span{
+    display: block;
+    margin:15px auto 0 ;
+}
+
+.footer .info ul li:hover{
+    color: black;
+}
+.footer .sosmed{
+    color: white;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+.footer .sosmed .wrapper{
+    width: 250px;
+    margin: 5px auto 0;
+}
+.footer .sosmed .wrapper ul{
+    list-style: none;
+    padding: 0;
+    display:flex;
+    justify-content: space-around
+    ;
+    align-items: center;
+}
+.wrapper img{
+    width: 50px;
+    height: 50px;
+    
+}
+.contact{
+    text-align: center;
+}
+.contact span{
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+
+@media screen and (max-width :810px){
+    nav ul{
+        width: 40%;
+        position: absolute;
+        right: -25px;
+        top:100%;
+        flex-direction: column  ;
+        align-items: center;
+        height: 80vh;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: 0.5s;
+       
+    }
+    nav ul li{
+        display: flex;
+        width: 120%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    nav ul li:hover nav ul{
+        background-color: black;
+    }
+    nav ul li a{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        place-items: center;
+        background-color: #026042;
+    }
+    nav ul li a:hover{
+        background-color: rgb(0, 128, 0);
+    }
+
+    nav .burgerButton{
+        display: flex;
+        
+    }
+    nav .burgerButton span{
+        width: 40px;
+    }
+    .container{
+        height: 1000px;
+        flex-direction: column;
+        
+    }
+    nav .burgerButton span{
+        display: block;
+    }
+   .contact{
+       margin-bottom: 40px;
+   }
+   .container h1.judul{
+    font-size: 2em;
+   }
+   
+
+}

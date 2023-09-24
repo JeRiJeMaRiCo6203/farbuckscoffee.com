@@ -1,0 +1,270 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #E6DCD4;
+}
+
+/* navbar */
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+    background-color:#026042;
+    z-index: 100;
+}
+nav .nama img{
+    height:90px;
+}
+nav ul {
+    display: flex;
+    /* display: none; */
+    list-style: none;
+    width: 30%;
+    justify-content: space-evenly;
+    /* border: 2px solid black; */
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+nav ul li a:hover{
+    color: rgb(215, 215, 31);
+}
+
+
+nav .burgerButton span{
+    display: block;
+    /* width:40px; */
+    height: 3px ;
+    border-radius: 3px;
+    background-color: white;
+
+}
+nav .burgerButton{
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+nav .burgerButton:hover{
+    background-color: rgba(221, 221, 221,0.5);
+}
+
+.transformBurger {
+    transform: rotate(90deg) scale(0.7);
+ 
+}
+.bestSale .kotak .warnaActive {
+    background-color: #aaa;
+    transform: scale(1.5);
+}
+
+.slide{
+    transform:translateX(0) ;
+}
+
+
+
+
+/* form  */
+input[type="text"],input[type="password"], input[type="email"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ddd;
+    outline-color: #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+input:hover{
+    box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+    
+}
+  
+input[type="submit"]{
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: 0px solid black;
+    
+}
+
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+
+.clear{
+    clear: right;
+}
+input[type="submit"]{
+   float:right;
+}
+
+.container {
+    width: 50%;
+    box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 150px auto;
+  }
+
+.container .logo{
+    text-align: center;
+}
+.container h1{
+    text-align: center;
+    margin-bottom:20px;
+}
+.container form p{
+    margin-top: -3px;
+    text-indent: 2%;
+    color: red;
+}
+
+
+
+
+/* footer */
+.footer{
+    /* width: 100%; */
+    height: 100px;
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #026042;
+    display: flex;
+    /* flex-direction:column; */
+    justify-content: space-between;
+    justify-items: center;
+    /* margin: 20px; */
+    flex-wrap: wrap;
+}
+.footer {
+    font-size: .8em;
+}
+.info, .contact{
+    flex: 1;
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+}
+.sosmed{
+    flex:2;
+}
+.info ul{
+    padding: 0px;
+    width: 100%;
+    /* height: 50px; */
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    cursor: pointer;
+}
+.info ul li{
+    margin-left:5px;
+}
+.info span{
+    display: block;
+    margin-top: 20px;
+}
+.sosmed{
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.wrapper{
+    width: 300px;
+    height: 50px;
+    margin: -20px auto;
+}
+.wrapper ul{
+    list-style: none;
+    padding: 0;
+    display:flex;
+    justify-content: space-around
+    ;
+}
+.wrapper img{
+    width: 50px;
+    height: 50px;
+}
+.contact{
+    padding: 0;
+    text-align: center;
+}
+.contact span{
+    display: block;
+    margin-top: -18px;
+}
+
+@media screen and (max-width :810px){
+    nav ul{
+        width: 20%;
+        position: absolute;
+        right: -25px;
+        top:80%;
+        flex-direction: column ;
+        align-items: center;
+        height: 80vh;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: 0.5s;
+       
+    }
+    nav ul li{
+        display: flex;
+        width: 120%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    nav ul li:hover nav ul{
+        background-color: black;
+    }
+    nav ul li a{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        place-items: center;
+        background-color: #026042; 
+;
+    }
+    nav ul li a:hover{
+        background-color: rgba(0, 128, 0,0.5);
+    }
+
+    nav .burgerButton{
+        display: flex;
+        
+    }
+    nav .burgerButton span{
+        width: 40px;
+    }
+    .footer{
+        height: 200px;
+    }
+
+
+}

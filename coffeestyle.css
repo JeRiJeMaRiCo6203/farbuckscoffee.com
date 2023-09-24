@@ -1,0 +1,424 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    overflow-x: hidden;
+    background-color: #E6DCD4;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    background-color:#026042;
+    z-index: 100;
+}
+nav .nama img{
+    height:90px;
+}
+nav ul {
+    display: flex;
+    /* display: none; */
+    list-style: none;
+    width: 30%;
+    justify-content: space-evenly;
+    /* border: 2px solid black; */
+}
+
+nav ul li:nth-child(2) a{
+    text-shadow: 0 0 10px wheat;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+nav ul li a:hover{
+    text-shadow: 0 0 5px white;
+}
+
+
+nav .burgerButton span{
+    display: none;
+    /* width:40px; */
+    height: 3px ;
+    border-radius: 3px;
+    background-color: white;
+
+}
+nav .burgerButton{
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+nav .burgerButton:hover{
+    background-color: rgba(221, 221, 221,0.5);
+}
+
+.transformBurger {
+    transform: rotate(90deg) scale(0.7);
+ 
+}
+.bestSale .kotak .warnaActive {
+    background-color: #aaa;
+    transform: scale(1.5);
+}
+
+.slide{
+    transform:translateX(0) ;
+}
+
+/* betsale */
+.bestSale .kotak {
+    width:90%;
+    height: 500px;
+    margin: 120px auto;
+    position: relative;
+    background-image:url(../assets/coffee/BannerMenu.png);
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    background-position: center;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* body */
+.bestSale .kotak .desc{
+    width: 35%;
+    position: absolute;
+    color: white;
+    left:10px;
+    text-align: center;
+}
+.bestSale .kotak .desc h1{
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+.bestSale .kotak .desc p{
+    font-size: 2em;
+}
+
+.bestSale .kotak .next #next,
+.bestSale .kotak .prev #prev{
+    width: 30px;
+}
+
+.bestSale .kotak .prev:hover,
+.bestSale .kotak .next:hover{
+    background-color: white;
+    border-color: black;
+}
+
+.bestSale .kotak .prev{
+    left: -25px;
+}
+.bestSale .kotak .next{
+    right: -25px;
+}
+.bestSale .kotak .prev,
+.bestSale .kotak .next{
+    transition: 0.5s;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+ 
+.bestSale .kotak span{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    margin-left:5px;
+    border-radius:50% ;
+}
+
+.bestSale .kotak .satu{
+    bottom: 10px;
+    left: 45%;
+}
+.bestSale .kotak .dua{
+    bottom: 10px;
+    left: 50%;
+}
+.bestSale .kotak .tiga{
+    bottom: 10px;
+    left: 55%;
+}
+
+/* menu */
+h1.title{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto 20px;
+    padding-bottom: 2px;
+    letter-spacing: 5px;
+    
+}
+.garis{
+    width: 200px ;
+    border-bottom:3px solid black;
+    margin: -20px auto 20px;
+   
+}
+.container{
+    width: 70%;
+    margin:auto;
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    background-color: #E6DCD4;
+    box-shadow: 0px 0px 10px grey;
+}
+.kategori{
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    
+}
+.kategori h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    color: #E6DCD4;
+    text-shadow: 
+    1px 1px 5px rgb(54, 52, 52),
+    1px 1px 5px rgb(54, 52, 52);
+}
+
+.kategori span{
+    display: block;
+    text-indent: 2%;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.menu {
+    width: 200px;
+    height: 230px;
+    border: 2px solid rgb(221, 209, 209);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: .5s;
+}
+
+.menu:hover{
+    box-shadow: 0px 0px 5px rgba(68,68,68,0.6);
+}
+/* .menu .gambar  */
+.gambar{
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    place-items: center;
+    font-size: 0.8em;
+
+}
+.container .menu h2{
+    margin-bottom: 10px;
+}
+.container .menu:nth-child(3) h2,
+.container .menu:nth-child(4) h2{
+    font-size: 1em;
+}
+.gambar img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 180px;
+}
+.gambar span{
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    z-index: -100;
+    text-align: center;
+    margin: auto;
+}
+
+.gambar span h4 {
+    font-size: 1em;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+.container .gambar:hover span{
+    z-index: 5;
+    opacity: 1;
+}
+.container .menu .gambar img{
+    height:150px;
+}
+.container .gambar:hover img{
+    transition:.5s;
+    opacity: 0.2;
+}
+
+.container .menu h2 , .container .menu h3{
+    text-align: center;
+}
+
+.container .menu h3{
+    margin-top: -3px;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    background-color: #026042;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+}
+.footer .info, .footer .contact{
+    flex: 1;
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+}
+
+.info ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+    text-align: center;
+}
+.info span{
+    display: block;
+    margin:15px auto 0 ;
+}
+
+.footer .info ul li:hover{
+    color: black;
+}
+.footer .sosmed{
+    color: white;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+.footer .sosmed .wrapper{
+    width: 250px;
+    margin: 5px auto 0;
+}
+.footer .sosmed .wrapper ul{
+    list-style: none;
+    padding: 0;
+    display:flex;
+    justify-content: space-around
+    ;
+    align-items: center;
+}
+.wrapper img{
+    width: 50px;
+    height: 50px;
+    
+}
+.contact{
+    text-align: center;
+}
+.contact span{
+    display: block;
+    cursor: pointer;
+}
+
+
+
+ 
+@media screen and (max-width :810px){
+    nav ul{
+        width: 40%;
+        position: absolute;
+        right: -25px;
+        top:100%;
+        flex-direction: column  ;
+        align-items: center;
+        height: 80vh;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: 0.5s;
+       
+    }
+    nav ul li{
+        display: flex;
+        width: 120%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    nav ul li:hover nav ul{
+        background-color: black;
+    }
+    nav ul li a{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        place-items: center;
+        background-color: #026042;
+    }
+    nav ul li a:hover{
+        background-color: rgb(0, 128, 0);
+    }
+
+    nav .burgerButton{
+        display: flex;
+        
+    }
+    nav .burgerButton span{
+        width: 40px;
+    }
+    
+    nav .burgerButton span{
+        display: block;
+    }
+    .container .image{
+        flex: 0;
+    }
+    .bestSale .kotak .desc h1{
+        font-size: 3em;
+    }
+    .bestSale .kotak .desc p{
+        font-size: 1.2em;
+    }
+    
+
+}
